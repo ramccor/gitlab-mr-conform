@@ -17,8 +17,6 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest # ARM64 runners unsupported yet
-    needs:
-      - build
     steps:
       - name: Checkout
         uses: actions/checkout@v4
