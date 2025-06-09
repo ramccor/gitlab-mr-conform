@@ -21,7 +21,7 @@ ingress:
   hosts:
     - host: gitlab-mr-bot.local
       paths:
-        - path: /
+        - path: /webhook
           pathType: Prefix
   tls: []
 
@@ -53,7 +53,7 @@ route:
     matches:
       - path:
           type: PathPrefix
-          value: /
+          value: /webhook
 
     ## Filters define the filters that are applied to requests that match this rule.
     filters: []
