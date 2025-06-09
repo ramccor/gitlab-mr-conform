@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.1.0..v0.2.0) - 2025-06-09
+
+### ⛰️  Features
+
+- [``8974410``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/897441021b60f421b950cdda12e5402c54a03337): **(config)** add external config loader ([#6](https://github.com/chrxmvtik/gitlab-mr-conform/issues/6)) by @chrxmvtik in #6
+
+
+### 🐛 Bug Fixes
+
+- [``db63b0e``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/db63b0ee2d6de941d9231dc85a4db5bc47f0c3f4): **(chart)** change ingress/route path by @chrxmvtik
+
+
+### 📚 Documentation
+
+- [``a403dbe``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/a403dbe16e633de4d3c7906b7f97dcd28724e1b1): **(USAGE)** remove file by @chrxmvtik
+
+
+### Release
+
+- [``7679273``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/76792733637cac90e388dd21d640b911e263ab18): **(prepare, 0.1.0)** update changelog [skip ci] by @github-actions[bot]
+
+
+
+
+
+**Full Changelog**: https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.1.0...v0.2.0
+
+
 ## [0.1.0] - 2025-06-09
 
 ### ⛰️  Features
@@ -83,7 +111,6 @@ All notable changes to this project will be documented in this file.
 
 * @chrxmvtik
 * @github-actions[bot]
-* @
 
 
 
