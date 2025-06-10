@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.0..v0.2.1) - 2025-06-10
+
+### 🐛 Bug Fixes
+
+- [``cc51ac8``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/cc51ac8d0de5ce489f44f7bcfee3d8b4721de4ad): **(chart)** remove static tag from default values ([#9](https://github.com/chrxmvtik/gitlab-mr-conform/issues/9)) by @chrxmvtik in #9
+
+- [``2d3b2a4``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/2d3b2a43226246a0f1b6225c06203bff9a5392f6): **(cliff)** add missing quote by @chrxmvtik
+
+
+### ⚙️ Miscellaneous Tasks
+
+- [``acefaa8``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/acefaa8b747d5e073006f94503514b48ded6bbbd): **(release)** change release commitish target by @chrxmvtik
+
+- [``0231540``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/023154037e51b6db62e31f1cc15ed6088539bfa8): **(release)** change checkout depth by @chrxmvtik
+
+- [``8b2d33b``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/8b2d33b8b545a065b684598f69018580e5d529b7): **(release)** add deps to build job by @chrxmvtik
+
+- [``faa7604``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/faa7604e5b72fcd867aa96d6a4cb47a6346d8585): **(release)** split workflow jobs ([#10](https://github.com/chrxmvtik/gitlab-mr-conform/issues/10)) by @chrxmvtik in #10
+
+- [``4109b6e``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/4109b6e942ed607e791bdd1fd88194b88026b077): change release commit messages ([#8](https://github.com/chrxmvtik/gitlab-mr-conform/issues/8)) by @chrxmvtik in #8
+
+- [``f3876f7``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/f3876f784fdae2b78a9adc071a6d9695e5353a8c): update version to 0.2.0 [skip ci] by @github-actions[bot]
+
+- [``24e000c``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/24e000c37dcef9108a92b530de9f9dc26b1d8fc5): update chart app version to 0.2.0 [skip ci] by @github-actions[bot]
+
+- [``7c5a6e6``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/7c5a6e6b05ef407b25ae316f6f4420748f40bccb): update chart version to 0.2.0 [skip ci] by @github-actions[bot]
+
+
+### Release
+
+- [``7d7d0ea``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/7d7d0eac01ee653d2f181e87e375e45cff204052): **(prepare, 0.2.0)** update changelog [skip ci] by @github-actions[bot]
+
+
+
+
+
+**Full Changelog**: https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.0...v0.2.1
+
+
 ## [0.2.0](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.1.0..v0.2.0) - 2025-06-09
 
 ### ⛰️  Features
