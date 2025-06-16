@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.2](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.1..v0.2.2) - 2025-06-16
+
+### 🐛 Bug Fixes
+
+- [``15cd723``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/15cd72331159e5a1a7b741da89da1fe40f0cbd64): **(approvals)** fetch notes with pagination ([#16](https://github.com/chrxmvtik/gitlab-mr-conform/issues/16)) by @chrxmvtik in #16
+
+- [``003b2f7``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/003b2f7189a70ecbd45333c42975f5daedb022cd): **(approvals)** change approvals function ([#14](https://github.com/chrxmvtik/gitlab-mr-conform/issues/14)) by @chrxmvtik in #14
+
+- [``2bb2b8e``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/2bb2b8ebab13caf62d9687d36ea4480dfb1728ce): **(approvals)** correct approvals validation ([#12](https://github.com/chrxmvtik/gitlab-mr-conform/issues/12)) by @chrxmvtik in #12
+
+
+### ⬆️ Dependencies
+
+- [``76e14fd``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/76e14fd4a4b04fb7f7d3af0b058dbcb3c7aeb2d8): **(deps)** bump gitlab.com/gitlab-org/api/client-go ([#13](https://github.com/chrxmvtik/gitlab-mr-conform/issues/13)) by @dependabot[bot] in #13
+
+
+### ⚙️ Miscellaneous Tasks
+
+- [``9dfd954``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/9dfd954b54d9308a251d12400b83a0623fb1f434): separate group related to dependencies ([#17](https://github.com/chrxmvtik/gitlab-mr-conform/issues/17)) by @chrxmvtik in #17
+
+
+## Contributors ❤️
+
+* @dependabot[bot]
+
+
+
+**Full Changelog**: https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.1...v0.2.2
+
+
 ## [0.2.1](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.0..v0.2.1) - 2025-06-10
 
 ### 🐛 Bug Fixes
