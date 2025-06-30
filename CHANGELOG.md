@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.2..v0.3.0) - 2025-06-30
+
+### ⛰️  Features
+
+- [``202ce00``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/202ce0067e74afab2cb09a160a29336ab5d515f3): **(approvals)** add codeowners parser ([#24](https://github.com/chrxmvtik/gitlab-mr-conform/issues/24)) by @chrxmvtik in #24
+
+
+### 🐛 Bug Fixes
+
+- [``2de8cfd``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/2de8cfd739d374e0605f4b16c5615ddd66ec8756): **(config)** proper default config param ([#25](https://github.com/chrxmvtik/gitlab-mr-conform/issues/25)) by @chrxmvtik in #25
+
+- [``4ae1a13``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/4ae1a13f789ca0077e4100ca3fc6958a5e9c35ae): set resolve status after discussion creation ([#23](https://github.com/chrxmvtik/gitlab-mr-conform/issues/23)) by @chrxmvtik in #23
+
+
+### 🚜 Refactor
+
+- [``2022a6f``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/2022a6f228a48a867bfe35d2f3182676b4322adb): **(logging)** replace logrus with slog ([#20](https://github.com/chrxmvtik/gitlab-mr-conform/issues/20)) by @chrxmvtik in #20
+
+
+### 📚 Documentation
+
+- [``00d1e50``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/00d1e500fe477d00d95e4b0b695e0db2f989f650): **(README)** CODEOWNERS references ([#27](https://github.com/chrxmvtik/gitlab-mr-conform/issues/27)) by @chrxmvtik in #27
+
+
+### ⚙️ Miscellaneous Tasks
+
+- [``b832b49``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/b832b49055c4550cf4d592acafd535e528b335cf): **(release)** add missing changelog dependency ([#26](https://github.com/chrxmvtik/gitlab-mr-conform/issues/26)) by @chrxmvtik in #26
+
+- [``f8bd998``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/f8bd998616f92a0ae5ab8da4085d5615287b3af2): **(release)** squash release commits ([#21](https://github.com/chrxmvtik/gitlab-mr-conform/issues/21)) by @chrxmvtik in #21
+
+
+
+
+
+**Full Changelog**: https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.2...v0.3.0
+
+
 ## [0.2.2](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.1..v0.2.2) - 2025-06-16
 
 ### 🐛 Bug Fixes
