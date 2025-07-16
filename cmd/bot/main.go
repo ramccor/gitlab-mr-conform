@@ -12,6 +12,7 @@ import (
 	"gitlab-mr-conformity-bot/internal/config"
 	"gitlab-mr-conformity-bot/internal/conformity"
 	"gitlab-mr-conformity-bot/internal/gitlab"
+	"gitlab-mr-conformity-bot/internal/queue"
 	"gitlab-mr-conformity-bot/internal/server"
 	"gitlab-mr-conformity-bot/internal/storage"
 	"gitlab-mr-conformity-bot/pkg/logger"
@@ -31,6 +32,21 @@ func main() {
 
 	log.SetLevel(cfg.Server.LogLevel)
 
+	// Initialize Redis queue manager
+	queueConfig := &queue.Config{
+		RedisHost:          cfg.Queue.Redis.Host,
+		RedisPassword:      cfg.Queue.Redis.Password,
+		RedisDB:            cfg.Queue.Redis.DB,
+		QueuePrefix:        "gitlab:mr:queue",
+		LockPrefix:         "gitlab:mr:lock",
+		ProcessingPrefix:   "gitlab:mr:processing",
+		DefaultLockTTL:     cfg.Queue.Queue.LockTTL,            //10 * time.Second,
+		MaxRetries:         cfg.Queue.Queue.MaxRetries,         //3,
+		ProcessingInterval: cfg.Queue.Queue.ProcessingInterval, // 100 * time.Milisecond,
+	}
+
+	queueManager := queue.NewQueueManager(queueConfig, log)
+
 	// Initialize GitLab client
 	gitlabClient, err := gitlab.NewClient(cfg.GitLab.Token, cfg.GitLab.BaseURL, cfg.GitLab.Insecure)
 	if err != nil {
@@ -46,7 +62,14 @@ func main() {
 	checker := conformity.NewChecker(cfg.Rules, gitlabClient, log)
 
 	// Initialize HTTP server
-	srv := server.NewServer(cfg, gitlabClient, checker, store, log)
+	srv := server.NewServer(cfg, gitlabClient, checker, store, log, queueManager)
+
+	// Create context for graceful shutdown
+	c, cancel := context.WithCancel(context.Background())
+	defer cancel()
+
+	// Start the background job processor
+	go srv.StartProcessor(c)
 
 	// Start server
 	httpServer := &http.Server{

@@ -6,6 +6,7 @@ import (
 	"gitlab-mr-conformity-bot/internal/gitlab"
 	"gitlab-mr-conformity-bot/pkg/logger"
 	"strings"
+	"time"
 
 	"github.com/spf13/viper"
 )
@@ -25,6 +26,29 @@ type Config struct {
 	} `mapstructure:"gitlab"`
 
 	Rules RulesConfig `mapstructure:"rules"`
+
+	Queue QueueConfig `mapstructure:"queue"`
+}
+
+// QueueConfig holds Redis queue configuration
+type QueueConfig struct {
+	Enabled bool          `mapstructure:"enabled"`
+	Redis   RedisConfig   `mapstructure:"redis"`
+	Queue   QueueSettings `mapstructure:"queue"`
+}
+
+// RedisConfig holds Redis connection settings
+type RedisConfig struct {
+	Host     string `mapstructure:"host"`
+	Password string `mapstructure:"password"`
+	DB       int    `mapstructure:"db"`
+}
+
+// QueueSettings holds queue behavior settings
+type QueueSettings struct {
+	ProcessingInterval time.Duration `mapstructure:"processing_interval"`
+	MaxRetries         int           `mapstructure:"max_retries"`
+	LockTTL            time.Duration `mapstructure:"lock_ttl"`
 }
 
 type RulesConfig struct {
@@ -105,6 +129,11 @@ func Load() (*Config, error) {
 	viper.SetDefault("server.log_level", "INFO")
 	viper.SetDefault("gitlab.base_url", "https://gitlab.com")
 	viper.SetDefault("gitlab.insecure", false)
+	// Queue
+	viper.SetDefault("queue.enabled", false)
+	viper.SetDefault("queue.queue.lock_ttl", "10s")
+	viper.SetDefault("queue.queue.max_retries", 3)
+	viper.SetDefault("queue.queue.processing_interval", "100ms")
 
 	if err := viper.ReadInConfig(); err != nil {
 		return nil, err
@@ -117,6 +146,7 @@ func Load() (*Config, error) {
 	_ = viper.BindEnv("gitlab.token")
 	_ = viper.BindEnv("gitlab.secrettoken")
 	_ = viper.BindEnv("gitlab.base_url")
+	_ = viper.BindEnv("queue.redis.password")
 
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 
