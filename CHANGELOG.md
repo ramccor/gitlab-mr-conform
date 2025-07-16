@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.3.0..v0.4.0) - 2025-07-16
+
+### ⛰️  Features
+
+- [``64f4242``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/64f42424207e7c232ad7991d5f2f4e8aef99571d): redis queue mechanism ([#34](https://github.com/chrxmvtik/gitlab-mr-conform/issues/34)) by @chrxmvtik in #34
+
+
+### 🐛 Bug Fixes
+
+- [``1e792ba``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/1e792ba0f9318a69f04d13f5b249ef88c1964de2): adjust jira regex ([#33](https://github.com/chrxmvtik/gitlab-mr-conform/issues/33)) by @chrxmvtik in #33
+
+
+### ⬆️ Dependencies
+
+- [``4c3589a``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/4c3589a0b2c7cfdde2c0b8c13f2322107413369b): **(deps)** bump gitlab.com/gitlab-org/api/client-go ([#31](https://github.com/chrxmvtik/gitlab-mr-conform/issues/31)) by @dependabot[bot] in #31
+
+- [``1bb5808``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/1bb58081b0aea608fcc39c895d23b4d1ca1ec244): **(deps)** bump github.com/bmatcuk/doublestar/v4 from 4.8.1 to 4.9.0 ([#32](https://github.com/chrxmvtik/gitlab-mr-conform/issues/32)) by @dependabot[bot] in #32
+
+- [``6b46193``](https://github.com/chrxmvtik/gitlab-mr-conform/commit/6b46193717e7cb6fffab129d1e4cd7e464c87895): **(deps)** bump gitlab.com/gitlab-org/api/client-go ([#29](https://github.com/chrxmvtik/gitlab-mr-conform/issues/29)) by @dependabot[bot] in #29
+
+
+
+
+
+**Full Changelog**: https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.3.0...v0.4.0
+
+
 ## [0.3.0](https://github.com/chrxmvtik/gitlab-mr-conform/compare/v0.2.2..v0.3.0) - 2025-06-30
 
 ### ⛰️  Features
